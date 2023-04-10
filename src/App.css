@@ -1,38 +1,196 @@
-.App {
+/*HEADER*/
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+.logo {
+  width: 10%;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f1c40f;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #f1c40f;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.nav-links a:hover {
+  transform: scale(1.05);
+}
+
+.nav-links a:active {
+  transform: scale(0.95);
+}
+
+/*BODY PLANETS*/
+
+.title {
+  font-weight: 300;
+  width: fit-content;
+  display: flex;
+  margin: auto;
+  padding: 100px;
+}
+
+.planets-list {
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  list-style: none;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 100px;
+}
+
+.planets-list li {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.planets-list li:hover {
+  color: #a08e44;
+}
+
+.pagination {
+  width: fit-content;
+  margin: auto;
+  padding: 100px;
+}
+
+.modal {
+  width: fit-content;
+  margin: auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.residents {
+  margin: auto;
+  width: fit-content;
+  list-style: none;
+  padding-left: 0%;
   display: flex;
-  flex-direction: column;
+}
+
+.residents li {
+  width: fit-content;
+}
+
+.button-residents {
+  width: 100px;
+  height: 70px;
+  margin: 20px;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+.button-residents:hover {
+  background-color: #a08e44;
+}
+
+button {
+  cursor: pointer;
+}
+
+.next-page {
+  width: 100px;
+  height: 70px;
+  margin: 20px;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+.prev-page {
+  width: 100px;
+  height: 70px;
+  margin: 20px;
+  border: 0;
+  background-color: #f1c40f;
+}
+.next-page:hover {
+  background-color: #a08e44;
+}
+.prev-page:hover {
+  background-color: #a08e44;
+}
+
+.modal-close-btn {
+  width: 100px;
+  height: 70px;
+  margin: 20px;
+  border: 0;
+  background-color: #f1c40f;
+}
+
+.modal-close-btn:hover {
+  background-color: #a08e44;
+}
+
+/*FOOTER*/
+
+.footer-container {
+  background-color: black;
+  color: #f1c40f;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-social {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-text {
+  padding: 20px;
+}
+
+.clicked {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.social-icon {
+  color: #f1c40f;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-icon:hover {
+  transform: scale(1.2);
 }
